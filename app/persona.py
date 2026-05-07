@@ -1,31 +1,35 @@
 import os
-import google.generativeai as genai
+from google import genai
 from dotenv import load_dotenv
 
 load_dotenv()
-genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 
 
 class UserModeler:
     def __init__(self):
-        self.model = genai.GenerativeModel('gemini-1.5-flash')
+        # The client automatically looks for GEMINI_API_KEY in your .env
+        self.client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
+        self.model_id = "gemini-1.5-flash"
 
     def generate_persona(self, raw_history):
         """
-        Task A: Transforms raw Amazon/Yelp history into a
-        sophisticated behavioral profile.
+        Task A: Behavioral Fidelity Module.
+        Refined to capture 'Naija' nuance as per the hackathon brief.
         """
         prompt = f"""
-        Analyze the following user review history: {raw_history}
+        Act as a Nigerian consumer behavior expert. Analyze this review history:
+        {raw_history}
 
-        Create a detailed User Persona JSON including:
-        1. Tone (e.g., sarcastic, enthusiastic, brief)
-        2. Rating Bias (e.g., hard to please, easy 5-stars)
-        3. Local Context: Adapt this persona to sound like a Nigerian user 
-           (e.g., mention data costs, power reliability, or local slang where relevant) [cite: 12].
+        Create a 'Digital Persona' that captures:
+        1. Linguistic Style: (e.g., Use of words like 'Standard', 'Oshey', or formal Nigerian English).
+        2. Core Values: (e.g., Does the user prioritize durability because of local conditions?).
+        3. Rating Bias: (Are they stingy with 5-stars?).
 
-        Return ONLY a JSON object.
+        Return the result in a clean JSON format.
         """
-        response = self.model.generate_content(prompt)
+
+        response = self.client.models.generate_content(
+            model=self.model_id,
+            contents=prompt
+        )
         return response.text
-# User Modeling logic (Task A)
