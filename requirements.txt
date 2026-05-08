@@ -1,6 +1,8 @@
 # Python dependencies
 
-google-genai
 python-dotenv
 fastapi
 pydantic
+pandas
+uvicorn
+groq
