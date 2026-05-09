@@ -1,11 +1,8 @@
-```markdown
-# DSN x BCT LLM Agent: Contextual Nigerian Consumer Recommender
+# DSN x BCT LLM Agent: Nigerian Consumer AI Agent
 
 [![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=flat&logo=fastapi)](https://fastapi.tiangolo.com/)
 [![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)](https://www.docker.com/)
 [![Groq](https://img.shields.io/badge/Llama_3.3-Groq-orange)](https://groq.com/)
-
----
 
 ## 🇳🇬 Project Overview
 This project was built for the **DSN x BCT AI Agent Challenge**. It is a containerized LLM‑powered agent designed to connect global e‑commerce data with the realities of the Nigerian consumer market.  
@@ -15,7 +12,6 @@ Instead of just pattern matching, the agent applies **Agentic Reasoning** to sim
 - Cultural context (Pidgin English, local lifestyle)
 - Economic considerations (utility vs. prestige)
 
----
 
 ## 🚀 Key Features
 
@@ -27,7 +23,6 @@ Instead of just pattern matching, the agent applies **Agentic Reasoning** to sim
 - **Agentic Reasoning**: Assesses products for their usefulness in Nigerian settings (e.g., recommending a kettle as a backup cooking option during blackouts).
 - **Cross‑Domain Suggestions**: Suggests local experiences, like pairing kitchenware with Nigerian staples such as Jollof Rice.
 
----
 
 ## 🛠️ Architecture & Tech Stack
 - **Backend**: FastAPI (Python 3.12)
@@ -35,7 +30,6 @@ Instead of just pattern matching, the agent applies **Agentic Reasoning** to sim
 - **Data Engine**: Pandas for efficient history retrieval
 - **Deployment**: Dockerized and hosted on Render for always‑on API access
 
----
 
 ## 📦 Setup & Deployment
 
@@ -93,4 +87,3 @@ curl -X POST "[http://127.0.0.1:8000/task-b/recommend](http://127.0.0.1:8000/tas
  * [x] **01 Link to Agent:** https://dsn-bct-agent.onrender.com
  
 **Developed by donfaruk19 for the DSN x BCT AI Agent Hackathon 2026.**
-```
