@@ -3,7 +3,7 @@ Task B: Recommendation Engine.
 Implements Agentic Reasoning to provide contextualized Nigerian product suggestions.
 """
 # 1. Analyze user persona
-# 2. Match with local infrastructure constraints (Power/Data)
+# 2. Match with local infrastructure constraints (Power/Data etc)
 # 3. Generate cross-domain pairings (Food/Culture)
 import os
 from groq import Groq
@@ -20,11 +20,11 @@ class AgenticRecommender:
         Available Catalog Items: {str(catalog)}
 
         INSTRUCTIONS:
-        1. Analyze the user's local context (Nigeria: power, data costs, durability).
+        1. Analyze the user's local context (Nigeria: power, costs, durability etc).
         2. Evaluate the catalog items.
         3. Recommend the BEST item.
         4. Provide 'Reasoning' for the choice.
-        5. Suggest one 'Cross-Domain' item (e.g., a specific Nigerian food or movie) that pairs with this choice.
+        5. Suggest one 'Cross-Domain' item (e.g., a specific Nigerian food, movie, culture, drink etc) that pairs with the choice.
 
         Output format:
         Recommended Item: [Name]
