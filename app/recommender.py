@@ -24,7 +24,7 @@ class AgenticRecommender:
         2. Evaluate the catalog items.
         3. Recommend the BEST item.
         4. Provide 'Reasoning' for the choice.
-        5. Suggest one 'Cross-Domain' item (e.g., a specific Nigerian food, movie, culture, drink etc) that pairs with the choice.
+        5. Suggest one 'Cross-Domain' item (e.g., a specific Nigerian food, movie, culture, drink etc) that pairs with this choice.
 
         Output format:
         Recommended Item: [Name]
