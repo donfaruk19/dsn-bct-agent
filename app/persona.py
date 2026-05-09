@@ -7,7 +7,7 @@ load_dotenv()
 
 class UserModeler:
     def __init__(self):
-        # Using Groq for high-throughput to stay within hackathon performance limits
+        # Using Groq for high-throughput
         self.client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
     def generate_persona(self, history):
